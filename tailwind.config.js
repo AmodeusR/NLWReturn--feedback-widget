@@ -1,7 +1,14 @@
 module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          500: "#8257E5",
+          600: "#996DFF"
+        }
+      }
+    },
   },
   plugins: [],
 }
