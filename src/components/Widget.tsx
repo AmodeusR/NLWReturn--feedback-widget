@@ -9,7 +9,7 @@ const Widget = () => {
         <WidgetForm />
       </Popover.Panel>
 
-      <Popover.Button className="bg-brand-500 p-3 rounded-full center text-white hover:bg-brand-600 transition-colors group">
+      <Popover.Button className="bg-brand-500 p-3 rounded-full center text-white hover:bg-brand-300 transition-colors group">
         <ChatTeardropDots color="white" className="h-8 w-8" />
         <span className="text-lg font-medium max-w-0 overflow-hidden opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-500 ease">
           Feedback
