@@ -13,6 +13,17 @@ export class SubmitFeedback {
   ) {}
   
   async execute({ type, comment, screenshot }: SubmitFeedbackTemplate) {
+
+    if (!type) {
+      throw new Error("Neither type or comment shouldn't be empty. Check type.");
+    } else if (!comment) {
+      throw new Error("Neither type or comment shouldn't be empty. Check comment.");
+    }
+
+    if (screenshot && !screenshot.startsWith("data:image/png;base64")) {
+      throw new Error("Invalid image format");
+    }
+
     await this.feedbacksRepository.create({
       type,
       comment,
