@@ -5,10 +5,15 @@ import BottomSheet from "@gorhom/bottom-sheet";
 import { gestureHandlerRootHOC } from "react-native-gesture-handler";
 
 import FeedbackOptions from "../FeedbackOptions";
+import FeedbackForm from "../FeedbackForm";
 import Copyright from "../Copyright";
 
 import { styles } from "./styles";
 import { theme } from "../../theme";
+import { feedbackTypes } from "../../utils/feedbackTypes";
+
+export type FeedbackType = keyof typeof feedbackTypes;
+
 
 const Widget = () => {
   const bottomSheetRef = useRef<BottomSheet>(null);
@@ -25,8 +30,8 @@ const Widget = () => {
 
       <BottomSheet ref={bottomSheetRef} snapPoints={[1, 300]} backgroundStyle={styles.modal} handleIndicatorStyle={styles.indicator}>
         <View style={styles.container}>
-          <Text style={styles.title}>Deixe seu feedback</Text>
-          <FeedbackOptions />
+          {/* <FeedbackOptions /> */}
+          <FeedbackForm feedbackType="bug" />
           <Copyright />
         </View>
       </BottomSheet>

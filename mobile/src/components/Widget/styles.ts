@@ -23,16 +23,13 @@ export const styles = StyleSheet.create({
   },
   indicator: {
     backgroundColor: theme.colors.text_primary,
-    width: 36,
+    width: 38,
+    opacity: .25
   },
   container: {
     alignItems: "center",
     justifyContent: "space-between",
     height: "90%",
-    paddingVertical: 10
-  },
-  title: {
-    color: "#fff",
-    fontSize: 24,
-  },
+    paddingVertical: 5
+  }
 });
