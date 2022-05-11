@@ -4,13 +4,13 @@ import { theme } from "../../theme";
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.surface_secondary,
-    width: 98,
+    width: 104,
     height: 112,
     justifyContent: "center",
     alignItems: "center",
     padding: 12,
     marginHorizontal: 8,
-    borderRadius: 12,
+    borderRadius: 8,
   },
   image: {
     width: 40,
