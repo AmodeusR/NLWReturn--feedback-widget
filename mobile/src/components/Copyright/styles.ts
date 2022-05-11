@@ -3,7 +3,7 @@ import { theme } from "../../theme";
 
 export const styles = StyleSheet.create({
   text: {
-    fontSize: 14,
+    fontSize: 15,
     color: theme.colors.text_secondary,
     fontFamily: theme.fonts.medium,
   }
