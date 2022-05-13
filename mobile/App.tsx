@@ -8,9 +8,6 @@ import { useFonts, Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/
 import Widget from './src/components/Widget';
 import { theme } from './src/theme';
 
-import { LogBox } from 'react-native';
-LogBox.ignoreLogs(['Warning: ...']);
-
 export default function App() {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,

@@ -19,7 +19,7 @@ const ScreenshotButton = ({ screenshot, onTakeShot, onRemoveShot }: Props) => {
     >
       {screenshot ? (
         <View>
-          <Image style={styles.backgroundImage} source={{ uri: "https://github.com/amodeusr.png" }} />
+          <Image style={styles.backgroundImage} source={{ uri: screenshot }} />
           <Trash
             size={20}
             color={theme.colors.text_secondary}

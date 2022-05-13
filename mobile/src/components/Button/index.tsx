@@ -6,14 +6,20 @@ import { styles } from "./styles";
 
 interface Props extends TouchableOpacityProps {
  isLoading: boolean;
+ onError: boolean;
 }
 
-const Button = ({ isLoading }: Props) => {
+const Button = ({ isLoading, onError, ...props }: Props) => {
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} {...props}>
       {isLoading ?
         <ActivityIndicator color={theme.colors.text_on_brand_color} /> :
-        <Text style={styles.buttonText}>Enviar feedback</Text>
+          <Text style={styles.buttonText}>
+            { onError ?
+              "Algo deu errado :(" :
+              "Enviar feedback"
+            }
+          </Text>
       }
     </TouchableOpacity>
   );

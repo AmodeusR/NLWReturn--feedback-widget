@@ -35,6 +35,8 @@ export class SubmitFeedback {
       body: [
         `<p>Tipo do feedback: ${type}</p>`,
         `<p>Commentário do feedback: ${comment}</p>`,
+        `Captura da tela:`,
+        `<img src="${screenshot}" />`
       ].join("\n")
     })
   };

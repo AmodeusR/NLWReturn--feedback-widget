@@ -3,22 +3,26 @@ import React from "react";
 
 import FeedbackOption from "../FeedbackOption";
 import { feedbackTypes } from "../../utils/feedbackTypes";
-
+import { FeedbackType } from "../Widget";
 import { styles } from "./styles";
 
-const FeecbackOptions = () => {
-  return (
-    <>
-    <Text style={styles.title}>Deixe seu feedback</Text>
-    <View
-      style={styles.container}
-    >
+interface Props {
+  onFeedbackChange: (param: FeedbackType) => void;
+}
 
-      {Object.entries(feedbackTypes).map(([key, value]) => (
-        <FeedbackOption key={key} title={value.title} imageSrc={value.image} />
-      ))}
+const FeecbackOptions = ({ onFeedbackChange }: Props) => {
+  
+  return (
+    <View style={styles.outerContainer}>
+      <Text style={styles.title}>Deixe seu feedback</Text>
+      <View
+        style={styles.innerContainer}
+      >
+        {Object.entries(feedbackTypes).map(([key, value]) => (
+          <FeedbackOption key={key} title={value.title} imageSrc={value.image} onPress={() => onFeedbackChange(key as FeedbackType)} />
+        ))}
+      </View>
     </View>
-    </>
   );
 };
 

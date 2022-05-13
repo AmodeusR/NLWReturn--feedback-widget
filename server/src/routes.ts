@@ -2,7 +2,6 @@ import { NodeMailerMailAdapter } from "./adapters/NodeMailer/NodeMailerMailAdapt
 import { PrismaFeedbacks } from "./repositories/prisma/prisma-feedbacks";
 import { SubmitFeedback } from "./services/submit-feedback";
 import express from "express";
-import nodemailer from "nodemailer";
 
 export const routes = express.Router();
 
