@@ -5,6 +5,8 @@ import ReturnButton from "../../ReturnButton";
 import ScreenshotButton from "../ScreenshotButton";
 
 import { FeedbackType, feedbackTypes } from "..";
+import api from "../../../lib/api";
+import Loading from "../Loading";
 
 interface Props {
   feedbackType: FeedbackType;
@@ -17,16 +19,29 @@ const FeedbackContent = ({ feedbackType, handleFeedbackRestart, setFeedbackSent 
 
   const [screenshot, setScreenshot] = useState<string | null>(null);
   const [feedbackComment, setFeedbackComment] = useState("");
+  const [isSendingFeedback, setIsSendingFeedback] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmission = (e: FormEvent) => {
+  const handleSubmission = async (e: FormEvent) => {
     e.preventDefault();
 
-    console.log({
-      feedbackComment,
-      screenshot
-    });
+    try {
+      setIsSendingFeedback(true);
 
-    setFeedbackSent(true);    
+      await api.post("/feedbacks", {
+        type: feedbackTypeInfo.title,
+        comment: feedbackComment,
+        screenshot
+      });
+      
+      setFeedbackSent(true);
+    } catch (error) {
+      console.warn(error);
+      setError(true);
+    } finally {
+      setIsSendingFeedback(false);
+    }
+    
   }
 
   return (
@@ -59,14 +74,19 @@ const FeedbackContent = ({ feedbackType, handleFeedbackRestart, setFeedbackSent 
         <div className="buttons flex gap-2 w-full">
           <ScreenshotButton setScreenshot={setScreenshot} screenshot={screenshot} />
           <button
-            disabled={feedbackComment.length === 0}
+            disabled={feedbackComment.length === 0 || isSendingFeedback}
             type="submit"
             className="
               bg-brand-500 rounded p-2 font-medium hover:bg-brand-300 transition-colors flex-1
               focus:outline-none focus:ring-brand-500 focus:ring-offset-2 focus:ring-2 ring-offset-zinc-900
               disabled:opacity-50 disabled:hover:bg-brand-500
           ">
-            Enviar feedback
+            { isSendingFeedback ?
+              <Loading /> :
+              error ?
+              "Algo deu errado :(" :
+              "Enviar Feedback"
+            }
           </button>
         </div>
       </form>
