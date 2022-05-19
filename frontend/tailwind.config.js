@@ -7,6 +7,9 @@ module.exports = {
           500: "#8257E5",
           300: "#996DFF"
         }
+      },
+      screens: {
+        xs: "370px"
       }
     },
   },

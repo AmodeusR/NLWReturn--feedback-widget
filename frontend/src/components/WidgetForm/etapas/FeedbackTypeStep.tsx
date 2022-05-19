@@ -12,7 +12,7 @@ const FeedbackTypeStep = ({ setFeedbackType }: Props) => {
         <h2>Deixe seu feedback</h2>
         <CloseButton className="absolute right-5 top-5.5" />
       </div>
-      <div className="options flex gap-4 ">
+      <div className="options flex flex-col xs:flex-row gap-4 ">
         {Object.entries(feedbackTypes).map(([key, value]) => (
           <button
             key={key}

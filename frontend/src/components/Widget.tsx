@@ -4,7 +4,7 @@ import WidgetForm from "./WidgetForm";
 
 const Widget = () => {
   return (
-    <Popover className="absolute bottom-6 right-6 flex flex-col items-end">
+    <Popover className="absolute bottom-6 right-4 md:right-6 flex flex-col items-end">
       <Popover.Panel className="mb-4">
         <WidgetForm />
       </Popover.Panel>
