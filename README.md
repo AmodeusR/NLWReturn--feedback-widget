@@ -1,6 +1,8 @@
 <!-- markdownlint-disable MD033 -->
 <h1 align="center">NLW Return – Feedback Widget</h1>
 
+<img src="./page-models/capa-feedback-widget.png" />
+
 <p align="center">This is the final project for Rocketseat's Feedback Widget challenge.</p>
 
 <h3 align="center">Languages</h3>
@@ -13,48 +15,59 @@
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
 
 ### The challenge
 
-. list challenges
-
-### Screenshots
-
-| Desktop View (1280px) | Tablet View (768px) | Mobile View (375px)|
-|-------|-------|-------|
-|![Desktop View (1280px)](./page-models/desktop.png)|![iPad View (768px)](./page-models/tablet.png)|![iPhone View (375px)](./page-models/mobile.png)|
+- Create a Feedback Widget with integrated Backend service, responsivity and accessibility support
+- Ensuring a well written code and unit testing the application
+- Create a mobile version app
 
 ### Links
 
-- Live Site URL: [Github Pages](https://amodeusr.github.io/)
+- Live Site URL: [Vercel App](https://nlw-return-feedback-widget-pi.vercel.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- Mobile-first workflow
-- CSS Custom Properties
-- CSS Grid
-- Flexbox
-- Sass
+- Frontend
+  - React
+  - Typescript
+  - TailwindCSS
+  - Axios
+  - HeadlessUI
+  - Phosphor React Icons
+  - HTML2Canvas
+  - Vite
+- Backend
+  - Typescript
+  - Prisma
+  - Jest
+  - Nodemailer
+- Mobile App
+  - React Native
+    - Gesture Handler
+    - View Shot
+    - Reanimated
+  - Typescript
+  - Bottom-Sheet
+  - Phosphor React Icons
+- Others
+  - Vercel
+  - Railway
 
 ### What I learned
 
-. Describe what you've learned.
+Although the final result seems simple enough – just a feedback widget – it actually takes us on a long journey through many technologies, good practices and real world experience which would never be possible if not through a seemingly simple project. Nonetheless, fully complete in essentially all aspects.
 
-### Useful resources
-
-. List resources
+Every inch of this project taught me something unique in a way or another. I had my first contact with many techs through this project – TailwindCSS, React Native, Prisma... – and reinforced others, whilst also learning about very important concepts, practices and much more about what we should do, why and how.
 
 ## Author
 
