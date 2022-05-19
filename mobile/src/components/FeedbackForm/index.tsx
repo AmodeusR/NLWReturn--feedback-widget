@@ -47,8 +47,8 @@ const FeedbackForm = ({
       });
 
       onFeedbackSubmission(true);
-    } catch (error) {
-      console.warn(error);
+    } catch (error: object) {
+      console.error(error.message);
     } finally {
       setIsSendingFeedback(false);
     }
