@@ -31,7 +31,7 @@
 
 ### Links
 
-- Live Site URL: [Vercel App](https://nlw-return-feedback-widget-pi.vercel.app/)
+- Live Site URL: [Vercel App](https://nlw--feedback-widget.vercel.app/)
 
 ## My process
 
