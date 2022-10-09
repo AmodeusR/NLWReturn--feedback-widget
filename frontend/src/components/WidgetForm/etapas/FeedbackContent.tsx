@@ -8,13 +8,13 @@ import { FeedbackType, feedbackTypes } from "..";
 import api from "../../../lib/api";
 import Loading from "../Loading";
 
-interface Props {
+export interface FeedbackContentProps {
   feedbackType: FeedbackType;
   handleFeedbackRestart: () => void;
   setFeedbackSent: (type: boolean) => void;
 }
 
-const FeedbackContent = ({ feedbackType, handleFeedbackRestart, setFeedbackSent }: Props) => {
+const FeedbackContent = ({ feedbackType, handleFeedbackRestart, setFeedbackSent }: FeedbackContentProps) => {
   const feedbackTypeInfo = feedbackTypes[feedbackType];
 
   const [screenshot, setScreenshot] = useState<string | null>(null);
